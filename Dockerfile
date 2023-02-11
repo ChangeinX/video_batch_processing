@@ -7,6 +7,6 @@ COPY requirements.txt  .
 RUN  apt-get update \
      && pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
-ENTRYPOINT python app.py \
+ENTRYPOINT python processing.py \
     --file_id ${FILE_ID} \
     --access_token ${ACCESS_TOKEN}

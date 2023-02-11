@@ -174,9 +174,7 @@ class S3OpenCVSimpleTest:
         print("Uploading video...")
         # upload video
         with open(out_file, "rb") as f:
-            self.dbx.files_upload(
-                f.read(), "/" + out_file, mode=WriteMode("overwrite")
-            )
+            self.dbx.files_upload(f.read(), "/" + out_file, mode=WriteMode("overwrite"))
 
             print(f'End time: {time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}')
 
