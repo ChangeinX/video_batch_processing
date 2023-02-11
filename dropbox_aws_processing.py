@@ -9,7 +9,7 @@ import dropbox
 from dropbox.exceptions import ApiError
 from dropbox.files import WriteMode
 
-dropbox_access_token = "sl.BYq1dVLDFiRPvfhomFCtX7FX7G0fOKeHhOsHn1moY3XyVY8ccO7feEOd0k1OT0b1VNV1Mv-mofOeFPfvA5xaOcOe3h4nsZ4gissPntLTBewYTNKN92_DaoHHGOn7FGvKYdDu1rCE"
+dropbox_access_token = ""
 
 dir_path = ""
 
@@ -50,7 +50,6 @@ def get_entries_from_dropbox():
     return entries
 
 
-# list of file ids, and file names concurrently
 def get_file_ids_and_names():
     entries = get_entries_from_dropbox()
     # zip file ids and file names to appear together
@@ -59,5 +58,3 @@ def get_file_ids_and_names():
     for file_id, file_name in zip(file_ids, file_names):
         print(file_id, file_name)
 
-
-get_file_ids_and_names()
